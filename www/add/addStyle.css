@@ -94,7 +94,7 @@ label {
 input[type="text"],
 input[type="number"],
 textarea {
-    width: 100%;
+    width: 96%;
     padding-bottom: -50%;
     border: none;
     border-bottom: 12px solid #ccc;
