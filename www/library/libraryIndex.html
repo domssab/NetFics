@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="libraryStyle.css">
+</head>
+<body>
+    <header>
+        <h1>Library</h1>
+        <div class="menu">
+            <button id="layout-toggle">
+                <img src="menu-icon.png" alt="Menu">
+            </button>
+            <div class="dropdown">
+                <button class="dropdown-item" onclick="setLayout('grid')">Grid</button>
+                <button class="dropdown-item" onclick="setLayout('list')">List</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="library" class="grid-layout">
+        <!-- Book items will be injected here -->
+    </main>
+
+    <script src="libraryScript.js"></script>
+</body>
+</html>
