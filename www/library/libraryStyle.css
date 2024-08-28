@@ -1,18 +1,21 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9;
+    height: 100vh;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
@@ -39,16 +42,17 @@ h1 {
 .dropdown {
     display: none;
     position: absolute;
-    top: 40px;
+    top: 36px;
     right: 0;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
     overflow: hidden;
+    z-index: 10;
 }
 
 .dropdown-item {
-    padding: 10px 20px;
+    padding: 10px 16px;
     font-size: 14px;
     cursor: pointer;
     border: none;
@@ -61,20 +65,24 @@ h1 {
     background-color: #f1f1f1;
 }
 
-/* Grid Layout */
+/* Mobile Grid Layout */
 .grid-layout {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 20px;
-    padding: 20px;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for a mobile grid layout */
+    gap: 12px;
+    padding: 12px;
+    flex-grow: 1;
+    overflow-y: auto;
 }
 
-/* List Layout */
+/* Mobile List Layout */
 .list-layout {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    padding: 20px;
+    gap: 12px;
+    padding: 12px;
+    flex-grow: 1;
+    overflow-y: auto;
 }
 
 /* Book Item Styles */
@@ -90,11 +98,11 @@ h1 {
     width: 100%;
     height: auto;
     border-radius: 4px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .book-item h2 {
-    font-size: 16px;
+    font-size: 14px;
     margin: 0;
 }
 
@@ -109,11 +117,18 @@ h1 {
     display: flex;
     align-items: center;
     text-align: left;
-    padding: 15px;
+    padding: 10px;
 }
 
 .list-layout .book-item img {
-    width: 60px;
-    height: 90px;
-    margin-right: 15px;
+    width: 50px;
+    height: 75px;
+    margin-right: 10px;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 400px) {
+    .grid-layout {
+        grid-template-columns: 1fr; /* 1 column on very small screens */
+    }
 }
