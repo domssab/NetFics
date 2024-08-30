@@ -1,0 +1,213 @@
+header {
+    overflow: hidden;
+    background-color: #9c86b3;
+    position: fixed;
+    top: 0;
+    width: 350px;
+    padding: 15px;
+    padding-top: 20px;
+}
+
+.header-flex {
+    display: flex;
+    align-items: center;
+}
+
+.header-flex img {
+    margin-right: 10px; /* Adjust spacing as needed */
+    max-width: 50px;
+}
+
+.header-flex h3 {
+    margin: 0 10px; /* Adjust spacing as needed */
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.header-flex i {
+    margin-left: auto; /* Push the icon to the far right */
+    font-size: 24px;
+}
+
+.footer-nav {
+    position: fixed;
+    bottom: 0;
+    width: 350px;
+    padding: 15px;
+    background-color: #DAD3BE;
+    text-align: center;
+    z-index: 1000;
+}
+
+.footer-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-nav li {
+    display: inline;
+}
+
+.footer-nav a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    background-color: #b8a2a2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 350px;
+    padding: 15px;
+    margin-top: 80px;
+    margin-bottom: 55px;
+    flex-direction: column;
+}
+
+.addABook {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.fa-xmark {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.book-cover {
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.book-cover input[type="file"] {
+    display: none;
+}
+
+.cover-placeholder {
+    display: inline-block;
+    width: 100px;
+    height: 150px;
+    border: 2px dashed #cccccc7e;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+}
+
+#cover-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+}
+
+.fa-plus {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: #888;
+    display: none;
+}
+.cover-placeholder:hover .fa-plus {
+    display: block;
+}
+
+.cover-placeholder:hover #cover-preview {
+    opacity: 0.5;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 5px;
+    color: #666666;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 96%;
+    padding: -50px;
+    border: none;
+    border-bottom: 12px solid #ccc;
+    font-size: 14px;
+    background-color: transparent;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.radio-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.radio-group input[type="radio"] {
+    display: none;
+}
+
+.radio-group label {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    flex: 1;
+    text-align: center;
+    background-color: #f1f1f1;
+    box-sizing: border-box;
+}
+
+.radio-group input[type="radio"]:checked + label {
+    background-color: #555;
+    color: #fff;
+}
+
+.save-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #a58b7f;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.save-btn:hover {
+    background-color: #8d7267;
+}
