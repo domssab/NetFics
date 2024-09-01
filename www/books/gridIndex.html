@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetFics</title>
+    <link rel="stylesheet" href="gridStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script defer src="../books/booksScript.js"></script>
+</head>
+<body>
+    <header class="header-flex">
+        <img src="../img/profile.png" alt="profile" class="profile">
+        <h3> Hello, World! </h3>
+        <i class="fa-solid fa-gear"></i>
+    </header>
+
+    <footer class="footer-nav">
+        <nav>
+            <ul>
+                <li><a href="#home"><i class="fa-solid fa-house"></i></a></li>
+                <li><a href="../books/gridIndex.html"><i class="fa-solid fa-book"></i></a></li>
+                <li><a href="../add/addIndex.html"><i class="fa-solid fa-circle-plus"></i></a></li>
+                <li><a href="#movie"><i class="fa-solid fa-film"></i></a></li>
+                <li><a href="#profile"><i class="fa-solid fa-user"></i></a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <shelf class="my-library">
+        <div class="this-library">
+            <h1>Library</h1>
+            <div class="dropdown">
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+                <div class="dropdown-content">
+                    <a href="../books/gridIndex.html" data-value="gridLayout" class="dropdown-item">Grid<span class="active-indicator"></span></a>
+                    <a href="../books/listIndex.html" data-value="listLayout" class="dropdown-item">List<span class="active-indicator"></span></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-grid"></div>
+    </shelf>
+</body>
+</html>

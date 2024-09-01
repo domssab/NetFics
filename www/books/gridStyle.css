@@ -1,0 +1,149 @@
+header {
+    overflow: hidden;
+    background-color: #9c86b3;
+    position: fixed;
+    top: 0;
+    width: 350px;
+    padding: 15px;
+    padding-top: 20px;
+    z-index: 1000;
+}
+
+.header-flex {
+    display: flex;
+    align-items: center;
+}
+
+.header-flex img {
+    margin-right: 10px; /* Adjust spacing as needed */
+    max-width: 50px;
+}
+
+.header-flex h3 {
+    margin: 0 10px; /* Adjust spacing as needed */
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.header-flex i {
+    margin-left: auto; /* Push the icon to the far right */
+    font-size: 24px;
+}
+
+.footer-nav {
+    position: fixed;
+    bottom: 0;
+    width: 350px;
+    padding: 15px;
+    background-color: #DAD3BE;
+    text-align: center;
+    z-index: 1000;
+}
+
+.footer-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-nav li {
+    display: inline;
+}
+
+.footer-nav a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+shelf {
+    width: 350px;
+    background-color: #b8a2a2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 15px;
+    margin-top: 80px;
+    margin-bottom: 55px;
+    flex-direction: column;
+}
+
+.this-library {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.fa-ellipsis-vertical {
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    right: 0;
+    top: 0px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown-item.active {
+    background-color: #f1f1f1; /* Highlight the active item */
+    font-weight: bold;
+}
+
+.active-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    display: inline-block;
+}
+
+.active .active-indicator {
+    background-color: #555;
+    border-color: #555;
+}
+
+.dropdown.show .dropdown-content {
+    display: block;
+}
