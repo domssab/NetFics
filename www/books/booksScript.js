@@ -46,3 +46,26 @@ document.addEventListener('click', function(event) {
         dropdown.classList.remove('show');
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const bookContainer = document.getElementById('book-container');
+    const dropdownItems = document.querySelectorAll('.dropdown-item');
+
+    dropdownItems.forEach(item => {
+        item.addEventListener('click', function(event) {
+            event.preventDefault();
+            const layout = this.getAttribute('data-value');
+            switchLayout(layout);
+        });
+    });
+
+    function switchLayout(layout) {
+        if (layout === 'gridLayout') {
+            bookContainer.classList.remove('book-list');
+            bookContainer.classList.add('book-grid');
+        } else if (layout === 'listLayout') {
+            bookContainer.classList.remove('book-grid');
+            bookContainer.classList.add('book-list');
+        }
+    }
+});

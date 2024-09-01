@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var description = document.getElementById("description").value;
         var readingStatus = document.querySelector('input[name="reading-status"]:checked').value;
         var bookStatus = document.querySelector('input[name="book-status"]:checked').value;
+        var bookCover = document.getElementById("cover-preview").src[0]
 
         // Create a book object
         const book = {
@@ -21,7 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
             chapters: chapters,
             description: description,
             readingStatus: readingStatus,
-            bookStatus: bookStatus
+            bookStatus: bookStatus,
+            cover: bookCover
         };
 
         // Save the book object to local storage
@@ -31,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Clear the form after saving
         form.reset();
-
+        document.getElementById('cover-preview').style.display = 'none';
         // Display the updated book list
         displayBooks();
     });
@@ -56,6 +58,16 @@ document.addEventListener("DOMContentLoaded", function () {
             bookListContainer.appendChild(bookItem);
         });
     }
+
+    // Function to preview the book cover
+    function loadCover(event) {
+        const coverPreview = document.getElementById('cover-preview');
+        coverPreview.src = URL.createObjectURL(event.target.files[0]);
+        coverPreview.style.display = 'block'; // Make sure the preview is visible
+    }
+
+    // Ensure the function is globally accessible
+    document.getElementById('cover-upload').addEventListener('change', loadCover);
 
     // Display the books when the page loads
     displayBooks();

@@ -147,3 +147,31 @@ h1 {
 .dropdown.show .dropdown-content {
     display: block;
 }
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.book-list {
+    display: block;
+}
+
+.book-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.book-item.grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.book-item.list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
