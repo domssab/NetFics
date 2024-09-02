@@ -1,3 +1,27 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const bookListContainer = document.getElementById('book-list-container');
+
+    // Retrieve the books from localStorage
+    const books = JSON.parse(localStorage.getItem('books')) || [];
+
+    // Check if there are any books stored
+    if (books.length === 0) {
+        bookListContainer.innerHTML = '<p>No books found.</p>';
+    } else {
+        books.forEach((book, index) => {
+            const bookItem = document.createElement("div");
+            bookItem.className = "book-item";
+            bookItem.innerHTML = `
+                <img src="${URL.createObjectURL(book.cover)}" alt="Book Cover" class="book-cover">
+                <h3>${book.title}</h3>
+                <p><strong>Author:</strong> ${book.author}</p>
+            
+                `;
+            bookListContainer.appendChild(bookItem);
+        });
+    }
+});
+
 // Toggle the dropdown
 document.querySelector('.fa-ellipsis-vertical').addEventListener('click', function(event) {
     event.stopPropagation(); // Prevent this click event from triggering the window click listener
