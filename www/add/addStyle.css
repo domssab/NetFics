@@ -65,7 +65,7 @@ header {
 main {
     background-color: #b8a2a2;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     margin: 0;
     width: 350px;
