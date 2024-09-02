@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("book-form");
-    const bookListContainer = document.createElement("div"); // Container for the book list
+    const bookListContainer = document.createElement("book-container"); // Container for the book list
     document.body.appendChild(bookListContainer);
 
     form.addEventListener("submit", function (e) {
@@ -49,24 +49,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Function to display the books on the app
-    function displayBooks() {
-        var books = JSON.parse(localStorage.getItem("books")) || [];
-        bookListContainer.innerHTML = ''; // Clear previous content
-
-        books.forEach((book) => {
-            var bookItem = document.createElement("div");
-            bookItem.className = "book-item";
-            bookItem.innerHTML = `
-                <img src="${book.cover}" alt="Book Cover" class="book-cover">
-                <div class="book-details">
-                    <span class="title" data-label="Title">Title: ${book.title}</span><br>
-                    <span class="author" data-label="Author">Author: ${book.author}</span><br>
-            `;
-            bookListContainer.appendChild(bookItem);
-        });
-    }
-
     // Function to preview the book cover
     function loadCover() {
         var fileInput = document.getElementById('cover-upload');
@@ -95,6 +77,4 @@ document.addEventListener("DOMContentLoaded", function () {
     // Ensure the function is globally accessible
     document.getElementById('cover-upload').addEventListener('change', loadCover);
 
-    // Display the books when the page loads
-//    displayBooks();
 });

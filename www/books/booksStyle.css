@@ -150,8 +150,10 @@ h1 {
 
 .book-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 0, auto;
+    justify-content: center;
 }
 
 .book-list {
@@ -159,9 +161,8 @@ h1 {
 }
 
 .book-item {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px 0;
+    width: 100%;
+    margin: 10px;
 }
 
 .book-item.grid {
@@ -176,3 +177,19 @@ h1 {
     align-items: center;
 }
 
+.book-cover {
+    width: 86px;
+    height: 133px;
+    object-fit: cover;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.author {
+    font-size: 14px;
+    font-style: italic;
+    color: #ccc;
+}
