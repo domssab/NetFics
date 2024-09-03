@@ -1,6 +1,6 @@
 header {
     overflow: hidden;
-    background-color: #FAF5FF;
+    background-color: #A7915F;
     position: fixed;
     top: 0;
     width: 350px;
@@ -36,7 +36,7 @@ header {
     bottom: 0;
     width: 350px;
     padding: 15px;
-    background-color: #DAD3BE;
+    background-color: #A7915F;
     text-align: center;
     z-index: 1000;
 }
@@ -65,7 +65,7 @@ header {
 
 view {
     width: 350px;
-    background-color: #b8a2a2;
+    background-color: #FEFFD2;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
