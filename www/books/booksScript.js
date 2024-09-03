@@ -3,13 +3,14 @@ document.addEventListener("DOMContentLoaded", function() {
     const dropdownIcon = document.querySelector('.fa-ellipsis-vertical');
     const dropdown = document.querySelector('.dropdown');
     const dropdownItems = document.querySelectorAll('.dropdown-item');
+    const books = JSON.parse(localStorage.getItem('books')) || [];
 
     // Display books
     function displayBooks() {
         const books = JSON.parse(localStorage.getItem("books")) || [];
         bookListContainer.innerHTML = ''; // Clear previous content
 
-        books.forEach((book) => {
+        books.forEach((book, index) => {
             const bookItem = document.createElement("div");
             bookItem.className = "book-item";
             bookItem.innerHTML = `
@@ -19,6 +20,11 @@ document.addEventListener("DOMContentLoaded", function() {
                     <span class="author" data-label="Author">${book.author}</span><br>
                 </div>
             `;
+            bookItem.addEventListener('click', function() {
+                // Pass the book details via URL parameters
+                const url = `../details/detailsIndex.html?title=${encodeURIComponent(book.title)}&author=${encodeURIComponent(book.author)}&description=${encodeURIComponent(book.description)}&cover=${encodeURIComponent(book.cover)}&readingStatus=${encodeURIComponent(book.readingStatus)}&bookStatus=${encodeURIComponent(book.bookStatus)}`;
+                window.location.href = url;
+            });
             bookListContainer.appendChild(bookItem);
         });
     }

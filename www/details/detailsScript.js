@@ -1,12 +1,19 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const books = JSON.parse(localStorage.getItem('books')) || [];
-    const bookItems = document.querySelectorAll('.book-item');
+    function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+    }
 
-    bookItems.forEach((item, index) => {
-        item.addEventListener('click', function() {
-            const book = books[index];
-            const url = `bookDetail.html?title=${encodeURIComponent(book.title)}&author=${encodeURIComponent(book.author)}&description=${encodeURIComponent(book.description)}&cover=${encodeURIComponent(book.cover)}&readingStatus=${encodeURIComponent(book.readingStatus)}&bookStatus=${encodeURIComponent(book.bookStatus)}`;
-            window.location.href = url;
-        });
-    });
+    // Set the book details from URL parameters
+    document.getElementById('book-title').textContent = getQueryParam('title');
+    document.getElementById('book-author').textContent = getQueryParam('author');
+    document.getElementById('book-description').textContent = getQueryParam('description');
+    document.getElementById('reading-status').textContent = getQueryParam('readingStatus');
+    document.getElementById('book-status').textContent = getQueryParam('bookStatus');
+    
+    // Set the book cover image
+    const coverUrl = getQueryParam('cover');
+    if (coverUrl) {
+        document.getElementById('book-cover').src = coverUrl;
+    }
 });

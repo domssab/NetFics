@@ -7,6 +7,7 @@ header {
     padding: 15px;
     padding-top: 20px;
     padding-bottom: 10px;
+    z-index: 1000;
 }
 
 .header-flex {
@@ -20,9 +21,9 @@ header {
 }
 
 .header-flex h3 {
-    margin: 0 10px; /* Adjust spacing as needed */
-    font-size: 20px;
-    font-family: Arial, sans-serif;
+    margin: 0 5px; /* Adjust spacing as needed */
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .header-flex i {
@@ -70,7 +71,7 @@ view {
     align-items: flex-start;
     margin: 0;
     padding: 15px;
-    margin-top: 80px;
+    margin-top: 70px;
     margin-bottom: 55px;
     flex-direction: column;
     min-height: calc(100vh - 150px); /* 100vh minus header and footer height */
@@ -156,9 +157,13 @@ hr {
     margin: 20px 0;
 }
 
+.book-description {
+    flex-grow: 1; /* Allow the description to grow within the container */
+}
+
 .book-description p {
     font-size: 14px;
     color: #333;
     line-height: 1.6;
-    text-align: justify
+    text-align: justify;
 }
