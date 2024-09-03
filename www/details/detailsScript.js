@@ -1,20 +1,19 @@
 document.addEventListener("DOMContentLoaded", function() {
-    function getQueryParam(param) {
-        const urlParams = new URLSearchParams(window.location.search);
-        return urlParams.get(param);
-    }
+    // Retrieve the book details from localStorage
+    const book = JSON.parse(localStorage.getItem('selectedBook'));
 
-    // Set the book details from URL parameters
-    const title = getQueryParam('title');
-    document.getElementById('book-title').textContent = title;
-    document.getElementById('book-author').textContent = getQueryParam('author');
-    document.getElementById('book-description').textContent = getQueryParam('description');
-    document.getElementById('reading-status').textContent = getQueryParam('readingStatus');
-    document.getElementById('book-status').textContent = getQueryParam('bookStatus');
-    
-    const coverUrl = getQueryParam('cover');
-    if (coverUrl) {
-        document.getElementById('book-cover').src = coverUrl;
+    // Set the book details from the retrieved object
+    if (book) {
+        document.getElementById('book-title').textContent = book.title;
+        document.getElementById('book-author').textContent = book.author;
+        document.getElementById('book-description').textContent = book.description;
+        document.getElementById('reading-status').textContent = book.readingStatus;
+        document.getElementById('book-status').textContent = book.bookStatus;
+
+        const coverUrl = book.cover;
+        if (coverUrl) {
+            document.getElementById('book-cover').src = coverUrl;
+        }
     }
 
     // Handle back button click
@@ -31,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Handle delete button click
     document.getElementById('deleteButton').addEventListener('click', function() {
         const books = JSON.parse(localStorage.getItem('books')) || [];
-        const updatedBooks = books.filter(book => book.title !== title);
+        const updatedBooks = books.filter(storedBook => storedBook.title !== book.title);
 
         // Update localStorage
         localStorage.setItem('books', JSON.stringify(updatedBooks));

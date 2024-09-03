@@ -24,9 +24,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 // Save the current page (library) URL before navigating
                 localStorage.setItem('previousPage', window.location.href);
 
-                // Pass the book details via URL parameters
-                const url = `../details/detailsIndex.html?title=${encodeURIComponent(book.title)}&author=${encodeURIComponent(book.author)}&description=${encodeURIComponent(book.description)}&cover=${encodeURIComponent(book.cover)}&readingStatus=${encodeURIComponent(book.readingStatus)}&bookStatus=${encodeURIComponent(book.bookStatus)}`;
-                window.location.href = url;
+                // Save the selected book details to localStorage
+                localStorage.setItem('selectedBook', JSON.stringify(book));
+
+                // Navigate to the details page
+                window.location.href = '../details/detailsIndex.html';
             });
             bookListContainer.appendChild(bookItem);
         });
