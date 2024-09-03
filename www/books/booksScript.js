@@ -21,6 +21,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 </div>
             `;
             bookItem.addEventListener('click', function() {
+                // Save the current page (library) URL before navigating
+                localStorage.setItem('previousPage', window.location.href);
+
                 // Pass the book details via URL parameters
                 const url = `../details/detailsIndex.html?title=${encodeURIComponent(book.title)}&author=${encodeURIComponent(book.author)}&description=${encodeURIComponent(book.description)}&cover=${encodeURIComponent(book.cover)}&readingStatus=${encodeURIComponent(book.readingStatus)}&bookStatus=${encodeURIComponent(book.bookStatus)}`;
                 window.location.href = url;
@@ -32,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Initialize book display
     displayBooks();
 
-    // Toggle the dropdown
+    // Handle dropdown toggle
     if (dropdownIcon && dropdown) {
         dropdownIcon.addEventListener('click', function(event) {
             event.stopPropagation(); // Prevent this click event from triggering the window click listener
@@ -40,21 +43,16 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Add event listeners to each dropdown item
+    // Handle dropdown item selection
     dropdownItems.forEach(function(item) {
         item.addEventListener('click', function() {
-            // Remove active class from all items
             dropdownItems.forEach(function(item) {
                 item.classList.remove('active');
             });
-            // Add active class to the clicked item
             this.classList.add('active');
 
-            // Save the selected layout to localStorage
             const selectedLayout = this.getAttribute('data-value');
             localStorage.setItem('selectedLayout', selectedLayout);
-
-            // Switch layout
             switchLayout(selectedLayout);
         });
     });
@@ -63,9 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const selectedLayout = localStorage.getItem('selectedLayout');
     if (selectedLayout) {
         dropdownItems.forEach(function(item) {
-            // Remove active class from all items
             item.classList.remove('active');
-            // Apply active class to the item that matches the saved layout
             if (item.getAttribute('data-value') === selectedLayout) {
                 item.classList.add('active');
             }
