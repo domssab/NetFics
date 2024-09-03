@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NetFics</title>
+        <link rel="stylesheet" href="detailsStyle.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Inter:wght@400;500;600&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <script defer src="../details/detailsScript.js"></script>
+        <script src="../details/detailsScript.js"></script>
+
+        <script src="../js/main.js"></script>
+    </head>
+    <body>
+        <header class="header-flex">
+            <img src = "../img/profile.png" alt="profile" class="profile">
+            <h3> Hello, World! </h3>
+            <i class="fa-solid fa-gear"></i>
+        </header>
+
+        <view class="view-flex">
+            <div class="viewBook">
+                <i class="fa-solid fa-arrow-left"></i>
+            </div>
+
+            <div class="book-detail-container">
+                <div class="book-info">
+                    <img id="book-cover" src="../img/limerence.png" alt="Book Cover">
+                    <h2 id="book-title">Title goes here</h2>
+                    <p id="book-author">Author</p>
+                    <div class="status-container">
+                        <span id="book-status" class="status-label">Completed</span>
+                        <span id="reading-status" class="status-label">To Read</span>
+                        <i class="fa-solid fa-trash"></i>
+                    </div>
+                </div>
+                <hr>
+                <div class="book-description">
+                    <p id="book-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat.
+                    </p>
+                </div>
+            </div>
+
+        </view>
+        <footer class="footer-nav">
+            <nav>
+                <ul>
+                    <li><a href="#home"><i class="fa-solid fa-house"></i></a></li>
+                    <li><a href="#library"><i class="fa-solid fa-book"></i></a></li>
+                    <li><a href="#add"><i class="fa-solid fa-circle-plus"></i></a></li>
+                    <li><a href="#finished"><i class="fa-solid fa-medal"></i></a></li>
+                    <li><a href="#profile"><i class="fa-solid fa-user"></i></a></li>
+                </ul>
+            </nav>
+        </footer>
+    </body>
+</html>

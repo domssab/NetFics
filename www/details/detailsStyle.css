@@ -1,0 +1,164 @@
+header {
+    overflow: hidden;
+    background-color: #FAF5FF;
+    position: fixed;
+    top: 0;
+    width: 350px;
+    padding: 15px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.header-flex {
+    display: flex;
+    align-items: center;
+}
+
+.header-flex img {
+    margin-right: 10px; /* Adjust spacing as needed */
+    max-width: 40px;
+}
+
+.header-flex h3 {
+    margin: 0 10px; /* Adjust spacing as needed */
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.header-flex i {
+    margin-left: auto; /* Push the icon to the far right */
+    font-size: 24px;
+}
+
+.footer-nav {
+    position: fixed;
+    bottom: 0;
+    width: 350px;
+    padding: 15px;
+    background-color: #DAD3BE;
+    text-align: center;
+    z-index: 1000;
+}
+
+.footer-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-nav li {
+    display: inline;
+}
+
+.footer-nav a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+view {
+    width: 350px;
+    background-color: #b8a2a2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0;
+    padding: 15px;
+    margin-top: 80px;
+    margin-bottom: 55px;
+    flex-direction: column;
+    min-height: calc(100vh - 150px); /* 100vh minus header and footer height */
+}
+
+.viewBook {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.fa-arrow-left {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.book-detail-container {
+    max-width: 350px;
+    margin: auto;
+    padding: 20px;
+    justify-content: flex-start;
+    flex-direction: column;
+    display: flex;
+    min-height: calc(100vh - 150px);
+}
+
+.book-info {
+    text-align: center;
+}
+
+.book-info img {
+    width: 120px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.book-info h2 {
+    font-size: 18px;
+    margin: 0 0 2px 0;
+}
+
+.book-info p {
+    font-size: 14px;
+    color: #666;
+    margin: 2px 0 10px 0;
+}
+
+.status-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.status-label {
+    background-color: #ccc;
+    color: #fff;
+    padding: 3px 20px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+.fa-trash {
+    font-size: 16px;
+    color: #666;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+.book-description p {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify
+}

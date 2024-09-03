@@ -6,6 +6,7 @@ header {
     width: 350px;
     padding: 15px;
     padding-top: 20px;
+    padding-bottom: 10px;
     z-index: 1000;
 }
 
@@ -16,13 +17,13 @@ header {
 
 .header-flex img {
     margin-right: 10px; /* Adjust spacing as needed */
-    max-width: 50px;
+    max-width: 40px;
 }
 
 .header-flex h3 {
-    margin: 0 10px; /* Adjust spacing as needed */
-    font-size: 20px;
-    font-family: Arial, sans-serif;
+    margin: 0 5px; /* Adjust spacing as needed */
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .header-flex i {
@@ -70,7 +71,7 @@ shelf {
     align-items: center;
     margin: 0;
     padding: 15px;
-    margin-top: 80px;
+    margin-top: 70px;
     margin-bottom: 55px;
     flex-direction: column;
     min-height: calc(100vh - 150px); /* 100vh minus header and footer height */
@@ -81,12 +82,13 @@ shelf {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
 }
 
 h1 {
     font-size: 24px;
     margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
 }
 
 .dropdown {
@@ -194,12 +196,13 @@ h1 {
 
 .title {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
 }
 
 .author {
-    font-size: 14px;
-    font-style: italic;
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
     color: #ccc;
 }
 
@@ -208,7 +211,7 @@ h1 {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    width: 94%; /* Takes full width of the container */
+    width: 95%; /* Takes full width of the container */
     max-width: none; /* Removes any max-width constraints */
     border: 1px solid #ccc; /* Add border if needed */
     border-radius: 2px;
@@ -222,8 +225,8 @@ h1 {
 
 /* Additional List Layout Styling */
 .book-list .book-cover {
-    width: 32px;
-    height: 50px;
+    width: 52px;
+    height: 80px;
     object-fit: cover;
 }
 

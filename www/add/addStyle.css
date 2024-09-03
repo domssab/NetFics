@@ -6,6 +6,7 @@ header {
     width: 350px;
     padding: 15px;
     padding-top: 20px;
+    padding-bottom: 10px;
     z-index: 1000;
 }
 
@@ -16,13 +17,13 @@ header {
 
 .header-flex img {
     margin-right: 10px; /* Adjust spacing as needed */
-    max-width: 50px;
+    max-width: 40px;
 }
 
 .header-flex h3 {
-    margin: 0 10px; /* Adjust spacing as needed */
-    font-size: 20px;
-    font-family: Arial, sans-serif;
+    margin: 0 5px; /* Adjust spacing as needed */
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .header-flex i {
@@ -70,7 +71,7 @@ main {
     margin: 0;
     width: 350px;
     padding: 15px;
-    margin-top: 80px;
+    margin-top: 70px;
     margin-bottom: 55px;
     flex-direction: column;
 }
@@ -86,6 +87,8 @@ main {
 h1 {
     font-size: 24px;
     margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
 }
 
 .fa-xmark {
@@ -147,25 +150,31 @@ label {
     font-size: 12px;
     margin-bottom: 5px;
     color: #666666;
+    font-family: 'Inter', sans-serif;
 }
 
 input[type="text"],
 input[type="number"],
 textarea {
-    width: 96%;
+    width: 100%;
     padding: -50px;
     border: none;
-    border-bottom: 10px solid #ccc;
+    border-bottom: 8px solid #ccc;
     font-size: 14px;
     background-color: transparent;
     outline: none;
     transition: border-color 0.3s;
+    font-family: "inter", sans-serif;
 }
 
 
 textarea {
     resize: vertical;
-    height: 150px;
+    min-height: 150px; /* Initial height */
+    font-family: "inter", sans-serif;
+    font-size: 14px;
+    resize: none; /* Disable manual resizing */
+    overflow-y: hidden; /* Hide vertical scrollbar */
 }
 
 .radio-group {
@@ -179,16 +188,18 @@ textarea {
 }
 
 .radio-group label {
-    padding: 8px;
+    padding: 5px 12px 5px 12px;
     border: 1px solid #ccc;
     border-radius: 20px;
-    font-size: 14px;
+    font-size: 12px;
     cursor: pointer;
     flex: 1;
     text-align: center;
     background-color: #f1f1f1;
     box-sizing: border-box;
-}
+    font-family: "Inter", sans-serif;
+    white-space: nowrap; /* Prevents text from wrapping */
+} 
 
 .radio-group input[type="radio"]:checked + label {
     background-color: #555;
@@ -205,6 +216,8 @@ textarea {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-top: 15px;
+    font-family: "Inter", sans-serif;
 }
 
 .save-btn:hover {

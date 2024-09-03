@@ -77,4 +77,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // Ensure the function is globally accessible
     document.getElementById('cover-upload').addEventListener('change', loadCover);
 
+    // To disable scrolling of text area
+    const textarea = document.getElementById('description');
+    textarea.addEventListener('input', function () {
+        this.style.height = 'auto';  // Reset the height
+        this.style.height = this.scrollHeight + 'px';  // Set the height based on the scroll height
+    });
+
+    // Trigger the input event to adjust the height if there is already content
+    textarea.dispatchEvent(new Event('input'));
+
 });
