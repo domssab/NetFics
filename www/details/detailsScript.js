@@ -43,4 +43,17 @@ document.addEventListener("DOMContentLoaded", function() {
             history.back();
         }
     });
+
+        // Set the current reading status and book status
+        if (book) {
+            const readingStatusRadio = document.querySelector(`input[name="readingStatus"][value="${book.readingStatus}"]`);
+            if (readingStatusRadio) {
+                readingStatusRadio.checked = true;
+            }
+    
+            const bookStatusRadio = document.querySelector(`input[name="bookStatus"][value="${book.bookStatus}"]`);
+            if (bookStatusRadio) {
+                bookStatusRadio.checked = true;
+            }
+        }
 });
