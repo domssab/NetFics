@@ -18,6 +18,8 @@ header {
 .header-flex img {
     margin-right: 10px; /* Adjust spacing as needed */
     max-width: 40px;
+    max-height: 40px;
+    border-radius: 50%;
 }
 
 .header-flex h3 {
@@ -29,6 +31,7 @@ header {
 .header-flex i {
     margin-left: auto; /* Push the icon to the far right */
     font-size: 24px;
+    cursor: pointer; 
 }
 
 .footer-nav {
@@ -83,7 +86,6 @@ view {
     justify-content: space-between;
     align-items: center;
 }
-
 
 .fa-arrow-left {
     font-size: 20px;

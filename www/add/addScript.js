@@ -2,8 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("book-form");
     const exitButton = document.getElementById('exitButton'); // Exit button
     const addBookLink = document.querySelector('a[href="../add/addIndex.html"]');  // Add a Book page
-    const bookDescription = book.description.replace(/\n/g, '<br>');
-    document.getElementById('book-description').innerHTML = bookDescription;
     
 
     form.addEventListener("submit", function (e) {

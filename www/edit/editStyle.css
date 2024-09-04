@@ -178,6 +178,7 @@ textarea {
     overflow-y: hidden; /* Hide vertical scrollbar */
     background-color: #EDDFB2;
     border-radius: 4px;
+    padding: 10px;
 }
 
 .radio-group {
@@ -192,7 +193,7 @@ textarea {
 
 .radio-group label {
     padding: 5px 12px 5px 12px;
-    border: 1px solid #ccc;
+    border: none;
     border-radius: 20px;
     font-size: 12px;
     cursor: pointer;
