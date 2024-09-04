@@ -74,6 +74,7 @@ main {
     margin-top: 70px;
     margin-bottom: 55px;
     flex-direction: column;
+    min-height: calc(100vh - 150px); /* 100vh minus header and footer height */
 }
 
 .addABook {
