@@ -74,6 +74,37 @@ document.addEventListener("DOMContentLoaded", function() {
         bio: ''
     };
 
+    // Apply color coding to the reading status
+    const readingStatusElement = document.getElementById('reading-status');
+    switch (book.readingStatus) {
+        case 'To read':
+            readingStatusElement.classList.add('reading-to-read');
+            break;
+        case 'Reading':
+            readingStatusElement.classList.add('reading-reading');
+            break;
+        case 'Finished':
+            readingStatusElement.classList.add('reading-finished');
+            break;
+        case 'Paused':
+            readingStatusElement.classList.add('reading-paused');
+            break;
+    }
+
+    // Apply color coding to the book status
+    const bookStatusElement = document.getElementById('book-status');
+    switch (book.bookStatus) {
+        case 'Completed':
+            bookStatusElement.classList.add('status-completed');
+            break;
+        case 'Ongoing':
+            bookStatusElement.classList.add('status-ongoing');
+            break;
+        case 'Discontinued':
+            bookStatusElement.classList.add('status-discontinued');
+            break;
+    }
+
     // Update header with user data
     document.getElementById('header-profile').src = user.profileImage;
     document.getElementById('header-name').textContent = `Hello, ${user.name}!`;

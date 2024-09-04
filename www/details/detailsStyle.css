@@ -189,3 +189,33 @@ hr {
     white-space: pre-line;
 }
 
+/* Colors for book statuses */
+.status-completed {
+    background-color: #507E34; /* Green for completed */
+}
+
+.status-ongoing {
+    background-color: #A79E50; /* Yellow for ongoing */
+}
+
+.status-discontinued {
+    background-color: #814242; /* Red for discontinued */
+}
+
+/* Colors for reading statuses */
+.reading-to-read {
+    background-color: #BCA9A1; /* Blue for To Read */
+}
+
+.reading-reading {
+    background-color: #B18E7E; /* Purple for Reading */
+}
+
+.reading-finished {
+    background-color: #776056; /* Teal for Finished */
+}
+
+.reading-paused {
+    background-color: #42342E; /* Orange for Paused */
+}
+
