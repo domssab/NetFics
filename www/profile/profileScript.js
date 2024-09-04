@@ -45,4 +45,12 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("Edit profile icon clicked.");
         window.location.href = '../update/updateIndex.html'; // Redirect to edit profile page
     });
+
+    const bioElement = document.getElementById('bio');
+    
+    // Check if the bio is empty or contains only whitespace
+    if (!bioElement.textContent.trim()) {
+        bioElement.textContent = "Tap here to add a description about yourself...";
+    }
+    
 });
