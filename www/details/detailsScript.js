@@ -56,4 +56,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 bookStatusRadio.checked = true;
             }
         }
+
+        document.getElementById('bookEdit').addEventListener('click', function() {
+            // Save the book details to localStorage for editing
+            localStorage.setItem('bookToEdit', JSON.stringify(book));
+            // Redirect to the add/edit page
+            window.location.href = '../add/addIndex.html';
+        });
+        
 });
