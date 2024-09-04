@@ -212,7 +212,7 @@ textarea {
 .save-btn {
     width: 100%;
     padding: 10px;
-    background-color: #ccb570;
+    background-color: #DAB855;
     border: none;
     border-radius: 20px;
     color: #fff;
@@ -225,4 +225,32 @@ textarea {
 
 .save-btn:hover {
     background-color: #A38734;
+}
+
+#to-read:checked + label {
+    background-color: #BCA9A1;
+}
+
+#reading:checked + label {
+    background-color: #B18E7E;
+}
+
+#finished:checked + label {
+    background-color: #776056;
+}
+
+#pause:checked + label {
+    background-color: #42342E;
+}
+
+#completed:checked + label {
+    background-color: #507E34;
+}
+
+#ongoing:checked + label {
+    background-color: #A79E50;
+}
+
+#discontinued:checked + label {
+    background-color: #814242;
 }
