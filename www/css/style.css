@@ -16,6 +16,8 @@ header {
 .header-flex img {
     margin-right: 10px; /* Adjust spacing as needed */
     max-width: 40px;
+    max-height: 40px;
+    border-radius: 50%;
 }
 
 .header-flex h3 {
