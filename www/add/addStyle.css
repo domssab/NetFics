@@ -170,11 +170,13 @@ textarea {
 
 textarea {
     resize: vertical;
-    min-height: 150px; /* Initial height */
+    min-height: 175px; /* Initial height */
     font-family: "inter", sans-serif;
     font-size: 14px;
     resize: none; /* Disable manual resizing */
     overflow-y: hidden; /* Hide vertical scrollbar */
+    background-color: #EDDFB2;
+    border-radius: 4px;
 }
 
 .radio-group {

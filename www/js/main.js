@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("book-form");
-    const bookListContainer = document.createElement("book-container"); // Container for the book list
-    document.body.appendChild(bookListContainer);
+    const exitButton = document.getElementById('exitButton'); // Exit button
+    const addBookLink = document.querySelector('a[href="../add/addIndex.html"]');  // Add a Book page
+
+    
 
     form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -41,9 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Clear the form after saving
                 form.reset();
                 document.getElementById('cover-preview').style.display = 'none';
-
-                // Display the updated book list
-                displayBooks();
             };
             reader.readAsDataURL(fileInput.files[0]);
         }
@@ -53,19 +52,16 @@ document.addEventListener("DOMContentLoaded", function () {
     function loadCover() {
         var fileInput = document.getElementById('cover-upload');
         var preview = document.getElementById('cover-preview');
-        var file = fileInput.files[0];
         var plusIcon = document.querySelector('.fa-plus');
         
-        if (file) {
+        if (fileInput.files[0]) {
             var reader = new FileReader();
-    
             reader.onload = function(e) {
                 preview.src = e.target.result;
                 preview.style.display = 'block'; // Show the image element
                 plusIcon.style.display = 'none'; // Hide the plus icon
             };
-    
-            reader.readAsDataURL(file);
+            reader.readAsDataURL(fileInput.files[0]);
         } else {
             preview.src = '';
             preview.style.display = 'none'; // Hide the image element if no file is selected
@@ -76,7 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Handle exit button click
     document.getElementById('exitButton').addEventListener('click', function() {
         const previousPage = localStorage.getItem('previousPage');
-            
         if (previousPage) {
             window.location.href = previousPage; // Navigate back to the saved previous page
         } else {
@@ -87,13 +82,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // Ensure the function is globally accessible
     document.getElementById('cover-upload').addEventListener('change', loadCover);
 
-    // To disable scrolling of text area
+    // To disable scrolling of textarea
     const textarea = document.getElementById('description');
     textarea.addEventListener('input', function () {
         this.style.height = 'auto';  // Reset the height
         this.style.height = this.scrollHeight + 'px';  // Set the height based on the scroll height
     });
-
-    // Trigger the input event to adjust the height if there is already content
-    textarea.dispatchEvent(new Event('input'));
+    textarea.dispatchEvent(new Event('input')); // Adjust height if there's content
 });
