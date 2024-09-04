@@ -103,10 +103,14 @@ h1 {
 .profile-pic {
     text-align: center;
     padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Ensure that the image and text are stacked vertically */
 }
 
 .profile-image {
-    display: relative;
+    display: flex;
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -114,6 +118,8 @@ h1 {
     position: relative;
     cursor: pointer;
     overflow: hidden;
+    justify-content: center;
+    align-items: center;
 }
 
 .profile-image img {

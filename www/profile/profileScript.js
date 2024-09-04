@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
+    console.log("DOM fully loaded and parsed.");
+
     // Retrieve user data from localStorage
     let user = JSON.parse(localStorage.getItem('userProfile')) || {
         profileImage: '',
@@ -14,10 +16,10 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById('profile-username').textContent = user.username;
     document.getElementById('books-count').textContent = user.booksCount;
     document.getElementById('finished-count').textContent = user.finishedCount;
-    document.getElementById('bio').value = user.bio;
+    document.getElementById('bio').textContent = user.bio;
 
     // Load profile image if available
-    const profileImagePreview = document.getElementById('profile-image-preview');
+    const profileImagePreview = document.getElementById('profile-preview');
     if (user.profileImage) {
         profileImagePreview.src = user.profileImage;
         profileImagePreview.style.display = 'block';
@@ -38,9 +40,9 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById('finished-count').textContent = user.finishedCount;
     saveUserProfile(user);
 
-    // Load user data from localStorage and display on profile page
+    // Debugging statement to check if the event listener is triggered
     document.getElementById('editProfile').addEventListener('click', function() {
-        console.log("Edit profile icon clicked"); // Debugging statement
+        console.log("Edit profile icon clicked.");
         window.location.href = '../update/updateIndex.html'; // Redirect to edit profile page
     });
 });
