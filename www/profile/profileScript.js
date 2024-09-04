@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Load user data from localStorage and display on profile page
     document.getElementById('editProfile').addEventListener('click', function() {
+        console.log("Edit profile icon clicked"); // Debugging statement
         window.location.href = '../update/updateIndex.html'; // Redirect to edit profile page
     });
 });

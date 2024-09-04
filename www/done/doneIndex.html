@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NetFics</title>
+        <link rel="stylesheet" href="doneStyle.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <script src="doneScript.js"></script>
+    </head>
+    <body>
+        <header class="header-flex">
+            <img src = "..\img\profile.png" alt="profile" class="profile">
+            <h3> Hello, World! </h3>
+            <i class="fa-solid fa-gear"></i>
+        </header>
+
+        <done class="done-flex">
+            <div class="done-header">
+                <h1>Achievement</h1>
+                <div class="dropdown">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                    <div class="dropdown-content">
+                        <a href="#book-grid" data-value="gridLayout" class="dropdown-item">Grid<span class="active-indicator"></span></a>
+                        <a href="#book-list" data-value="listLayout" class="dropdown-item">List<span class="active-indicator"></span></a>
+                    </div>
+                </div>
+            </div>
+    
+            <ul id="book-container" class="book-grid"></ul>
+                <!-- For book items -->
+            </div>
+        </done>
+
+        <footer class="footer-nav">
+            <nav>
+                <ul>
+                    <li><a href="..\index.html"><i class="fa-solid fa-house"></i></a></li>
+                    <li><a href="..\books\booksIndex.html"><i class="fa-solid fa-book"></i></a></li>
+                    <li><a href="..\add\addIndex.html"><i class="fa-solid fa-circle-plus"></i></a></li>
+                    <li><a href="..\done\doneIndex.html"><i class="fa-solid fa-medal"></i></a></li>
+                    <li><a href="..\profile\profileIndex.html"><i class="fa-solid fa-user"></i></a></li>
+                </ul>
+            </nav>
+        </footer>
+    </body>
+</html>
