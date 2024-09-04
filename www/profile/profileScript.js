@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Retrieve user data from localStorage
     let user = JSON.parse(localStorage.getItem('userProfile')) || {
-        profileImage: '',
-        name: 'World',
+        profileImage: 'img/profile.png', // Default image if not set
+        name: 'World', // Default name if not set
         username: '@username',
         booksCount: 0,
         finishedCount: 0,
@@ -52,5 +52,9 @@ document.addEventListener("DOMContentLoaded", function() {
     if (!bioElement.textContent.trim()) {
         bioElement.textContent = "Tap here to add a description about yourself...";
     }
+
+    // Update header with user data
+    document.getElementById('header-profile').src = user.profileImage;
+    document.getElementById('header-name').textContent = `Hello, ${user.name}!`;
     
 });
