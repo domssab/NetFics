@@ -37,4 +37,9 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById('books-count').textContent = user.booksCount;
     document.getElementById('finished-count').textContent = user.finishedCount;
     saveUserProfile(user);
+
+    // Load user data from localStorage and display on profile page
+    document.getElementById('editProfile').addEventListener('click', function() {
+        window.location.href = '../update/updateIndex.html'; // Redirect to edit profile page
+    });
 });

@@ -80,6 +80,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 10px;
+}
+
+.fa-xmark {
+    font-size: 24px;
+    cursor: pointer;
 }
 
 h1 {
@@ -89,8 +95,8 @@ h1 {
     font-weight: bold;
 }
 
-.fa-pen {
-    font-size: 20px;
+.fa-floppy-disk {
+    font-size: 24px;
     cursor: pointer;
 }
 
@@ -128,6 +134,49 @@ h1 {
     display: none;
 }
 
+/* Editable Name and Username */
+#profile-name {
+    font-size: 20px;
+    padding-top: 5px;
+    font-weight: bold;
+    margin: 0;
+    border: none;
+    background-color: #FEFFD2;
+    width: calc(100% - 40px);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+}
+
+#profile-username {
+    font-size: 20px;
+    padding-top: 5px;
+    font-weight: regular;
+    margin: 0;
+    border: none;
+    background-color: #FEFFD2;
+    width: calc(100% - 40px);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+}
+
+#profile-username::before {
+    content: '@';
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-top: 5px; /* Adjust if needed */
+    color: #888;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#profile-name:focus, #profile-username:focus {
+    border-bottom: 2px solid #A7915F;
+    outline: none;
+}
+
 #profile-name {
     font-size: 20px;
     padding-top: 5px;
@@ -137,7 +186,6 @@ h1 {
 #profile-username {
     font-size: 15px;
     color: #888;
-    padding-top: 3px;
     margin: 0;
 }
 
@@ -179,6 +227,41 @@ h1 {
     resize: none;
 }
 
+/* Editable Bio Styling */
+.profile-bio {
+    background-color: #EDDFB2;
+    padding: 15px;
+    margin: 0;
+    border-radius: 8px;
+    text-align: left;
+    width: 90%;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.profile-bio textarea {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #EDDFB2;
+    resize: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #000;
+    box-sizing: border-box;
+}
+
+.profile-bio textarea:focus {
+    border-bottom: 2px solid #A7915F;
+    outline: none;
+}
+
 div {
     font-family: "Inter", sans-serif;
+}
+
+input .text {
+    border-bottom: 2px solid #A7915F;
 }

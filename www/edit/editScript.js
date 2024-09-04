@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Retrieve the selected book details from localStorage
     const book = JSON.parse(localStorage.getItem('selectedBook'));
-    const bookDescription = book.description.replace(/\n/g, '<br>');
 
 
     if (book) {
