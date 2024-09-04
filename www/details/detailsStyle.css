@@ -180,3 +180,7 @@ hr {
     text-align: justify;
 }
 
+.whitespace {
+    white-space: pre-line;
+}
+

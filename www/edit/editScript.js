@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Retrieve the selected book details from localStorage
     const book = JSON.parse(localStorage.getItem('selectedBook'));
+    const bookDescription = book.description.replace(/\n/g, '<br>');
+
 
     if (book) {
         document.getElementById('title').value = book.title;
@@ -59,6 +61,8 @@ document.addEventListener("DOMContentLoaded", function() {
         // Redirect back to the details page
         window.location.href = '../details/detailsIndex.html';
     }
+
+    document.getElementById('description').innerHTML = bookDescription;
 
     // Handle cancel button click
     document.getElementById('cancelEdit').addEventListener('click', function() {
