@@ -72,7 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('exitButton').addEventListener('click', function() {
         const previousPage = localStorage.getItem('previousPage');
         if (previousPage) {
-            localStorage.removeItem('previousPage'); // Clear previous page after navigation
             window.location.href = previousPage; // Navigate back to the saved previous page
         } else {
             history.back(); // Fallback to history.back() if no previous page is saved
