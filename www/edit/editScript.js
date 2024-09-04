@@ -76,6 +76,30 @@ document.addEventListener("DOMContentLoaded", function() {
         bio: ''
     };
 
+    // Function to preview the book cover
+    function loadCover() {
+        var fileInput = document.getElementById('cover-upload');
+        var preview = document.getElementById('cover-preview');
+        var plusIcon = document.querySelector('.fa-plus');
+        
+        if (fileInput.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                preview.src = e.target.result;
+                preview.style.display = 'block'; // Show the image element
+                plusIcon.style.display = 'none'; // Hide the plus icon
+            };
+            reader.readAsDataURL(fileInput.files[0]);
+        } else {
+            preview.src = '';
+            preview.style.display = 'none'; // Hide the image element if no file is selected
+            plusIcon.style.display = 'block'; // Show the plus icon if no file is selected
+        }
+    }
+
+    // Ensure the function is globally accessible
+    document.getElementById('cover-upload').addEventListener('change', loadCover);
+
     // Update header with user data
     document.getElementById('header-profile').src = user.profileImage;
     document.getElementById('header-name').textContent = `Hello, ${user.name}!`;
