@@ -106,7 +106,7 @@ h1 {
 }
 
 .profile-image {
-    display: inline-block;
+    display: relative;
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -122,6 +122,17 @@ h1 {
     border-radius: 50%;
     object-fit: cover;
     display: block; /* Ensure the image is always displayed */
+}
+.profile-image i {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 18px;
+    display: block;
 }
 
 #profile-preview {
