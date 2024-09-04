@@ -58,6 +58,10 @@ header {
     display: inline;
 }
 
+.footer-nav a.active i {
+    color: #FEFFD2;
+}
+
 .footer-nav a {
     color: #000000;
     text-decoration: none;

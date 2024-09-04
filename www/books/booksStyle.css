@@ -46,6 +46,10 @@ header {
     z-index: 1000;
 }
 
+.footer-nav a.active i {
+    color: #FEFFD2;
+}
+
 .footer-nav ul {
     list-style-type: none;
     margin: 0;
