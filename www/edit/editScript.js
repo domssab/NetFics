@@ -62,8 +62,6 @@ document.addEventListener("DOMContentLoaded", function() {
         window.location.href = '../details/detailsIndex.html';
     }
 
-    document.getElementById('description').innerHTML = bookDescription;
-
     // Handle cancel button click
     document.getElementById('cancelEdit').addEventListener('click', function() {
         history.back(); // Navigate back to the previous page without saving changes
