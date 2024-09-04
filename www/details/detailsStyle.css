@@ -20,6 +20,9 @@ header {
     max-width: 40px;
     max-height: 40px;
     border-radius: 50%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .header-flex h3 {

@@ -14,18 +14,4 @@ document.addEventListener("DOMContentLoaded", function() {
     // Update header with user data
     document.getElementById('header-profile').src = user.profileImage;
     document.getElementById('header-name').textContent = `Hello, ${user.name}!`;
-
-    // Example: updating other parts of the profile page (if needed)
-    document.getElementById('profile-name').textContent = user.name;
-    document.getElementById('profile-username').textContent = user.username;
-    document.getElementById('books-count').textContent = user.booksCount;
-    document.getElementById('finished-count').textContent = user.finishedCount;
-
-    // Additional logic for profile image, bio, etc., as needed
-    const bioElement = document.getElementById('bio');
-    if (!user.bio.trim()) {
-        bioElement.textContent = "Tap here to add a description about yourself...";
-    } else {
-        bioElement.textContent = user.bio;
-    }
 });

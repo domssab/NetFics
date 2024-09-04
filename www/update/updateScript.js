@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const usernameInput = document.getElementById('profile-username');
+    const headerProfileImage = document.getElementById('header-profile');
+    const headerName = document.getElementById('header-name');
 
     let user = JSON.parse(localStorage.getItem('userProfile')) || {
         profileImage: '',
@@ -17,7 +19,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const profileImagePreview = document.getElementById('profile-preview');
     if (user.profileImage) {
         profileImagePreview.src = user.profileImage;
+        headerProfileImage.src = user.profileImage; // Set header profile image
     }
+
+    // Update header with user data
+    document.getElementById('header-profile').src = user.profileImage;
+    document.getElementById('header-name').textContent = `Hello, ${user.name}!`;
 
     // Handle profile image upload
     const profileUpload = document.getElementById('profile-upload');
@@ -27,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const reader = new FileReader();
             reader.onload = function(e) {
                 profileImagePreview.src = e.target.result;
+                headerProfileImage.src = e.target.result; // Update header profile image
                 user.profileImage = e.target.result;
                 localStorage.setItem('userProfile', JSON.stringify(user));
             };
@@ -40,6 +48,8 @@ document.addEventListener("DOMContentLoaded", function() {
         user.name = document.getElementById('profile-name').value;
         user.username = document.getElementById('profile-username').value;
         user.bio = document.getElementById('bio').value;
+        
+        headerName.textContent = user.name; // Update header name in real-time
         
         const fileInput = document.getElementById('profile-upload');
         if (fileInput.files && fileInput.files[0]) {
