@@ -18,6 +18,12 @@
         </header>
 
         <home class="home-flex">
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Type to search" />
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <ul id="search-results" class="search-dropdown"></ul> <!-- Dropdown container -->
+            </div>
+
             <div class="home-header">
                 <h2>Reading Now</h2>
                 <div class="expand">
@@ -30,15 +36,18 @@
                 <!-- For book items -->
             </div>
 
-            <div class="home-header">
-                <h2>Reading Now</h2>
+            <br>
+            <br>
+
+            <div class="home-footer">
+                <h2>Read Later</h2>
                 <div class="expand">
-                    <a href="../reading/readingIndex.html">see all</a>
+                    <a href="../toRead/toReadIndex.html">see all</a>
                 </div>
             </div>
             
             <div class="scroll-container">
-                <ul id="book-container" class="book-scroll"></ul>
+                <ul id="to-read-container" class="book-scroll"></ul>
                 <!-- For book items -->
             </div>
         </home>
