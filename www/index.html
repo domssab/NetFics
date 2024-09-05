@@ -18,25 +18,27 @@
         </header>
 
         <home class="home-flex">
-            <div class="search-container">
-                <input type="text" id="search-input" placeholder="Type to search" />
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <ul id="search-results" class="search-dropdown"></ul> <!-- Dropdown container -->
-            </div>
-               
-
             <div class="home-header">
-                <h1>Achievement</h1>
-                <div class="dropdown">
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
-                    <div class="dropdown-content">
-                        <a href="#book-grid" data-value="gridLayout" class="dropdown-item">Grid<span class="active-indicator"></span></a>
-                        <a href="#book-list" data-value="listLayout" class="dropdown-item">List<span class="active-indicator"></span></a>
-                    </div>
+                <h2>Reading Now</h2>
+                <div class="expand">
+                    <a href="../reading/readingIndex.html">see all</a>
                 </div>
             </div>
-    
-            <ul id="book-container" class="book-grid"></ul>
+            
+            <div class="scroll-container">
+                <ul id="book-container" class="book-scroll"></ul>
+                <!-- For book items -->
+            </div>
+
+            <div class="home-header">
+                <h2>Reading Now</h2>
+                <div class="expand">
+                    <a href="../reading/readingIndex.html">see all</a>
+                </div>
+            </div>
+            
+            <div class="scroll-container">
+                <ul id="book-container" class="book-scroll"></ul>
                 <!-- For book items -->
             </div>
         </home>

@@ -21,8 +21,12 @@ document.addEventListener("DOMContentLoaded", function () {
             reader.onload = function (e) {
                 var bookCover = e.target.result;
 
+                // Create a unique ID for the book
+                const bookId = Date.now();
+
                 // Create a book object
                 const book = {
+                    id: bookId,
                     title: title,
                     author: author,
                     chapters: chapters,

@@ -84,79 +84,6 @@ home {
     min-height: calc(100vh - 150px); /* 100vh minus header and footer height */
 }
 
-.search-container {
-    display: flex;
-    justify-content: center;
-    padding: 10px 5px;
-    position: relative;
-    width: 100%;
-    max-width: 350px;
-    margin: 10px auto;
-    flex-direction: column;
-}
-
-.search-container input {
-    width: 100%;
-    padding: 10px 40px 10px 15px; /* Add padding-right to make room for the icon */
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box; /* Ensure padding doesn't affect width */
-}
-
-.search-container input:focus {
-    outline: none;
-    border-color: #555;
-}
-
-.search-container i {
-    position: absolute;
-    right: 20px; /* Position the icon inside the input */
-    top: 50%;
-    transform: translateY(-50%); /* Vertically center the icon */
-    color: #000; /* Icon color */
-    pointer-events: none; /* Disable pointer events so the input remains clickable */
-    font-size: 16px;
-    background-color: #d6c191;
-    padding: 11px;
-    border-top-right-radius: 5px; /* Apply border-radius to the top-left corner */
-    border-bottom-right-radius: 5px; /* Apply border-radius to the bottom-right corner */
-}
-
-#search-input {
-    width: calc(100% - 40px);
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-#search-results {
-    position: absolute;
-    top: 48px;
-    width: 93%;
-    background-color: white;
-    border: none;
-    border-radius: 0px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    max-height: 200px;
-    overflow-y: auto;
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-}
-
-#search-results li {
-    padding: 10px;
-    cursor: pointer;
-}
-
-#search-results li:hover {
-    background-color: #f0f0f0;
-}
-
-
 .home-header {
     width: 100%;
     display: flex;
@@ -164,113 +91,67 @@ home {
     align-items: center;
 }
 
-h1 {
+h2 {
     font-size: 24px;
     margin: 0;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
 }
 
-.dropdown {
+.expand a{
     position: relative;
     display: inline-block;
-}
-
-.fa-ellipsis-vertical {
-    font-size: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
-    cursor: pointer;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    border-radius: 5px;
-    right: 0;
-    top: 0px;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
+    font-family: 'Inter', sans-serif;
     text-decoration: none;
+    color: #555;
+}
+
+.scroll-container {
+    width: 100%; /* Full width of the container */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    display: flex-start;
+    justify-content: center;
+    overflow-x: auto;
+    touch-action: pan-x; /* Enable horizontal scrolling for touch devices */
+}
+
+{/* }.scroll-container::-webkit-scrollbar {
+    display: none; /* WebKit: hide scrollbar */
+}
+
+.book-scroll {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-.dropdown-item.active {
-    background-color: #f1f1f1; /* Highlight the active item */
-    font-weight: bold;
-}
-
-.active-indicator {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: transparent;
-    border: 1px solid #ccc;
-    display: inline-block;
-}
-
-.active .active-indicator {
-    background-color: #555;
-    border-color: #555;
-}
-
-.dropdown.show .dropdown-content {
-    display: block;
-}
-
-.book-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    flex-direction: row; /* Horizontal direction */
+    gap: 10px; /* Space between book items */
+    box-sizing: border-box;
     justify-content: center;
     width: fit-content;
-    box-sizing: border-box;
     padding: 0;
 }
 
-.book-list {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 0;
+/* Hide any extra books beyond the 5th */
+.book-scroll::after {
+    content: "";
+    flex-shrink: 0;
+    width: 10px; /* Small spacer after the last item */
+}
+
+/* Optional: Style to scroll smoothly */
+.scroll-container {
+    scroll-behavior: smooth;
 }
 
 .book-item {
-    width: 80%;
+    width: 100%;
+    max-width: 100px;
     margin: 10px;
-}
-
-.book-item.grid {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-.book-item.list {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
+    padding-right: 15px;
 }
 
 .book-cover {
-    width: 86px;
-    height: 133px;
+    margin-left: 10px;
+    width: 64px;
+    height: 100px;
     object-fit: cover;
 }
 
@@ -286,32 +167,35 @@ h1 {
     color: #ccc;
 }
 
-.book-list .book-item {
+.book-scroll .book-item {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
     width: 95%; /* Takes full width of the container */
     max-width: none; /* Removes any max-width constraints */
-    border: 1px solid #ccc; /* Add border if needed */
-    border-radius: 2px;
+    border: none; /* Add border if needed */
+    border-radius: 4px;
     margin: 5px;
+    background-color: #ebdbb7;
 }
 
-.book-list .title,
-.book-list .author {
-    margin-left: 15px; /* Space between the cover and text */
+.book-scroll .title,
+.book-scroll .author {
+    margin-left: 5px; /* Space between the cover and text */
 }
 
-/* Additional List Layout Styling */
-.book-list .book-cover {
-    width: 52px;
-    height: 80px;
-    object-fit: cover;
-}
-
-.book-list .title-author-container {
+.book-scroll .title-author-container {
     display: flex;
     flex-direction: column;
-    margin-left: 10px; /* Adjust as needed */
+    margin-left: spx; /* Adjust as needed */
+}
+
+.book-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    padding: 15px;
 }
