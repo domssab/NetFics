@@ -20,9 +20,12 @@ document.addEventListener("DOMContentLoaded", function () {
             var reader = new FileReader();
             reader.onload = function (e) {
                 var bookCover = e.target.result;
+                // Create a unique ID for the book
+            const bookId = Date.now(); // You can use timestamp or a more sophisticated approach
 
                 // Create a book object
                 const book = {
+                    id: bookId, //Include the unique id
                     title: title,
                     author: author,
                     chapters: chapters,
