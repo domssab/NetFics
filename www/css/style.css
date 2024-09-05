@@ -6,8 +6,6 @@ header {
     width: 350px;
     padding: 15px;
     padding-top: 20px;
-    padding-bottom: 10px;
-    z-index: 1000;
 }
 
 .header-flex {
@@ -34,7 +32,6 @@ header {
 .header-flex i {
     margin-left: auto; /* Push the icon to the far right */
     font-size: 24px;
-    cursor: pointer
 }
 
 .footer-nav {
@@ -74,12 +71,12 @@ header {
 }
 
 home {
+    width: 350px;
     background-color: #FEFFD2;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     margin: 0;
-    width: 350px;
     padding: 15px;
     margin-top: 70px;
     margin-bottom: 55px;
@@ -87,60 +84,67 @@ home {
     min-height: calc(100vh - 150px); /* 100vh minus header and footer height */
 }
 
-.search-bar {
+.search-container {
     display: flex;
     justify-content: center;
-    padding: 10px;
-}
-
-.search-bar input {
-    width: 80%;
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px 0 0 4px;
-}
-
-.search-bar button {
-    padding: 8px;
-    background-color: #ccc;
-    border: none;
-    border-radius: 0 4px 4px 0;
-    cursor: pointer;
-}
-
-.search-bar button i {
-    font-size: 16px;
-}
-
-.search-container {
+    padding: 10px 5px;
     position: relative;
     width: 100%;
     max-width: 350px;
     margin: 10px auto;
+    flex-direction: column;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 10px 40px 10px 15px; /* Add padding-right to make room for the icon */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.search-container input:focus {
+    outline: none;
+    border-color: #555;
+}
+
+.search-container i {
+    position: absolute;
+    right: 20px; /* Position the icon inside the input */
+    top: 50%;
+    transform: translateY(-50%); /* Vertically center the icon */
+    color: #000; /* Icon color */
+    pointer-events: none; /* Disable pointer events so the input remains clickable */
+    font-size: 16px;
+    background-color: #d6c191;
+    padding: 11px;
+    border-top-right-radius: 5px; /* Apply border-radius to the top-left corner */
+    border-bottom-right-radius: 5px; /* Apply border-radius to the bottom-right corner */
 }
 
 #search-input {
     width: calc(100% - 40px);
     padding: 10px;
-    font-size: 16px;
+    font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
 #search-results {
     position: absolute;
-    top: 45px;
-    width: 100%;
+    top: 48px;
+    width: 93%;
     background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: none;
+    border-radius: 0px;
     list-style: none;
     padding: 0;
     margin: 0;
     max-height: 200px;
     overflow-y: auto;
-    z-index: 1000;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
 }
 
 #search-results li {
@@ -152,55 +156,162 @@ home {
     background-color: #f0f0f0;
 }
 
-.reading-now {
-    padding: 20px;
-}
 
-.reading-now h2 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
-    margin-bottom: 10px;
+.home-header {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.reading-now .see-all {
-    font-size: 14px;
-    color: #555;
+h1 {
+    font-size: 24px;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.fa-ellipsis-vertical {
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    right: 0;
+    top: 0px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
     text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown-item.active {
+    background-color: #f1f1f1; /* Highlight the active item */
+    font-weight: bold;
+}
+
+.active-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    display: inline-block;
+}
+
+.active .active-indicator {
+    background-color: #555;
+    border-color: #555;
+}
+
+.dropdown.show .dropdown-content {
+    display: block;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-content: center;
+    width: fit-content;
+    box-sizing: border-box;
+    padding: 0;
 }
 
 .book-list {
     display: flex;
-    overflow-x: scroll;
-    padding: 10px 0;
-}
-
-.book-card {
-    background-color: #f5f5f5;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-right: 10px;
-    padding: 10px;
-    width: 150px;
-    flex-shrink: 0;
-    text-align: left;
-}
-
-.book-card img {
+    flex-direction: column;
+    align-items: flex-start;
     width: 100%;
-    height: auto;
-    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 0;
 }
 
-.book-card h3 {
-    font-size: 16px;
-    margin: 10px 0 5px;
+.book-item {
+    width: 80%;
+    margin: 10px;
+}
+
+.book-item.grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.book-item.list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.book-cover {
+    width: 86px;
+    height: 133px;
+    object-fit: cover;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 14px;
     font-family: 'Inter', sans-serif;
 }
 
-.book-card p {
+.author {
     font-size: 12px;
-    color: #666;
+    font-family: 'Inter', sans-serif;
+    color: #ccc;
+}
+
+.book-list .book-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 95%; /* Takes full width of the container */
+    max-width: none; /* Removes any max-width constraints */
+    border: 1px solid #ccc; /* Add border if needed */
+    border-radius: 2px;
+    margin: 5px;
+}
+
+.book-list .title,
+.book-list .author {
+    margin-left: 15px; /* Space between the cover and text */
+}
+
+/* Additional List Layout Styling */
+.book-list .book-cover {
+    width: 52px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.book-list .title-author-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px; /* Adjust as needed */
 }

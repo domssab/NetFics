@@ -12,26 +12,34 @@
     </head>
     <body>
         <header class="header-flex">
-            <img id="header-profile" src="img\profile.png" alt="profile" class="profile">
+            <img id="header-profile" src="..\img\profile.png" alt="profile" class="profile">
             <h3 id="header-name"> Hello, World! </h3>
             <i class="fa-solid fa-gear"></i>
         </header>
 
-        <home class = "home-page">
+        <home class="home-flex">
             <div class="search-container">
                 <input type="text" id="search-input" placeholder="Type to search" />
-                <button type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <i class="fa-solid fa-magnifying-glass"></i>
                 <ul id="search-results" class="search-dropdown"></ul> <!-- Dropdown container -->
-            </div>            
-        
-            <section class="reading-now">
-                <h2>Reading Now <a href="#" class="see-all">see all</a></h2>
-                <div class="book-list" id="readingNowList">
-                    <!-- Book cards will be inserted here dynamically -->
-                </div>
-            </section>
-        </home>
+            </div>
+               
 
+            <div class="home-header">
+                <h1>Achievement</h1>
+                <div class="dropdown">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                    <div class="dropdown-content">
+                        <a href="#book-grid" data-value="gridLayout" class="dropdown-item">Grid<span class="active-indicator"></span></a>
+                        <a href="#book-list" data-value="listLayout" class="dropdown-item">List<span class="active-indicator"></span></a>
+                    </div>
+                </div>
+            </div>
+    
+            <ul id="book-container" class="book-grid"></ul>
+                <!-- For book items -->
+            </div>
+        </home>
 
         <footer class="footer-nav">
             <nav>
