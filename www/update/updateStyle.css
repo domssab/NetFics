@@ -274,6 +274,8 @@ h1 {
     font-size: 14px;
     color: #000;
     box-sizing: border-box;
+    min-height: 50px; 
+    overflow: hidden; /* Prevent the scrollbar from appearing */
 }
 
 .profile-bio textarea:focus {
