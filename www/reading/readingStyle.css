@@ -1,0 +1,244 @@
+header {
+    overflow: hidden;
+    background-color: #A7915F;
+    position: fixed;
+    top: 0;
+    width: 350px;
+    padding: 15px;
+    padding-top: 20px;
+}
+
+.header-flex {
+    display: flex;
+    align-items: center;
+}
+
+.header-flex img {
+    margin-right: 10px; /* Adjust spacing as needed */
+    max-width: 40px;
+    max-height: 40px;
+    border-radius: 50%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.header-flex h3 {
+    margin: 0 5px; /* Adjust spacing as needed */
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header-flex i {
+    margin-left: auto; /* Push the icon to the far right */
+    font-size: 24px;
+}
+
+.footer-nav {
+    position: fixed;
+    bottom: 0;
+    width: 350px;
+    padding: 15px;
+    background-color: #A7915F;
+    text-align: center;
+    z-index: 1000;
+}
+
+.footer-nav a.active i {
+    color: #FEFFD2;
+}
+
+.footer-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-nav li {
+    display: inline;
+}
+
+.footer-nav a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+done {
+    width: 350px;
+    background-color: #FEFFD2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 15px;
+    margin-top: 70px;
+    margin-bottom: 55px;
+    flex-direction: column;
+    min-height: calc(100vh - 150px); /* 100vh minus header and footer height */
+}
+
+.done-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.fa-ellipsis-vertical {
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    right: 0;
+    top: 0px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown-item.active {
+    background-color: #f1f1f1; /* Highlight the active item */
+    font-weight: bold;
+}
+
+.active-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    display: inline-block;
+}
+
+.active .active-indicator {
+    background-color: #555;
+    border-color: #555;
+}
+
+.dropdown.show .dropdown-content {
+    display: block;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-content: center;
+    width: fit-content;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.book-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.book-item {
+    width: 80%;
+    margin: 10px;
+}
+
+.book-item.grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.book-item.list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.book-cover {
+    width: 86px;
+    height: 133px;
+    object-fit: cover;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+}
+
+.author {
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    color: #ccc;
+}
+
+.book-list .book-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 95%; /* Takes full width of the container */
+    max-width: none; /* Removes any max-width constraints */
+    border: 1px solid #ccc; /* Add border if needed */
+    border-radius: 2px;
+    margin: 5px;
+}
+
+.book-list .title,
+.book-list .author {
+    margin-left: 15px; /* Space between the cover and text */
+}
+
+/* Additional List Layout Styling */
+.book-list .book-cover {
+    width: 52px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.book-list .title-author-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px; /* Adjust as needed */
+}
