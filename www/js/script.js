@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 let resultItem = document.createElement('li');
                 resultItem.textContent = `${book.title} by ${book.author}`;
                 resultItem.addEventListener('click', function () {
-                    window.location.href = `detailsIndex.html?bookId=${book.id}`;
+                    window.location.href = `details/detailsIndex.html?bookId=${book.id}`;
                 });
                 searchResults.appendChild(resultItem);
             });

@@ -78,4 +78,12 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("Cancel button clicked!"); // Debugging statement
         history.back(); // Navigate back to the previous page without saving changes
     });
+
+    // To disable scrolling of textarea
+    const textarea = document.getElementById('bio');
+    textarea.addEventListener('input', function () {
+        this.style.height = 'auto';  // Reset the height
+        this.style.height = this.scrollHeight + 'px';  // Set the height based on the scroll height
+    });
+    textarea.dispatchEvent(new Event('input')); // Adjust height if there's content
 });
