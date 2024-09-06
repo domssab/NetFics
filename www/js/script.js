@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const toReadListContainer = document.getElementById('to-read-container');
     function displayToReadBooks() {
         const books = JSON.parse(localStorage.getItem("books")) || [];
-        const toReadBooks = books.filter(book => book.readingStatus === "to-read");
+        const toReadBooks = books.filter(book => book.readingStatus === "To-read");
         toReadListContainer.innerHTML = ''; // Clear previous content
 
         toReadBooks.forEach((book) => {

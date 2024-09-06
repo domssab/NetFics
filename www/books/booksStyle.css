@@ -77,7 +77,6 @@ header {
 
 shelf {
     width: 350px;
-    height: 100vh;
     background-color: #FEFFD2;
     display: flex;
     justify-content: flex-start;
