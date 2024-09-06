@@ -6,7 +6,6 @@ header {
     width: 350px;
     padding: 15px;
     padding-top: 20px;
-    padding-bottom: 10px;
     z-index: 1000;
 }
 
@@ -74,6 +73,7 @@ header {
 
 shelf {
     width: 350px;
+    height: 100vh;
     background-color: #FEFFD2;
     display: flex;
     justify-content: flex-start;
