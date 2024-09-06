@@ -7,7 +7,7 @@ header {
     background-color: #A7915F;
     position: fixed;
     top: 0;
-    width: 350px;
+    width: 330px;
     padding: 15px;
     padding-top: 20px;
     z-index: 1000;
@@ -43,7 +43,7 @@ header {
 .footer-nav {
     position: fixed;
     bottom: 0;
-    width: 350px;
+    width: 330px;
     padding: 15px;
     background-color: #A7915F;
     text-align: center;
@@ -78,7 +78,7 @@ view {
     justify-content: flex-start;
     align-items: center;
     margin: 0;
-    width: 350px;
+    width: 330px;
     padding: 15px;
     margin-top: 70px;
     margin-bottom: 55px;

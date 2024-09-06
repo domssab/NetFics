@@ -7,9 +7,10 @@ header {
     background-color: #A7915F;
     position: fixed;
     top: 0;
-    width: 350px;
+    width: 330px;
     padding: 15px;
     padding-top: 20px;
+    z-index: 1000;
 }
 
 .header-flex {
@@ -41,7 +42,7 @@ header {
 .footer-nav {
     position: fixed;
     bottom: 0;
-    width: 350px;
+    width: 330px;
     padding: 15px;
     background-color: #A7915F;
     text-align: center;
@@ -75,7 +76,7 @@ header {
 }
 
 done {
-    width: 350px;
+    width: 330px;
     background-color: #FEFFD2;
     display: flex;
     justify-content: flex-start;
