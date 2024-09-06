@@ -86,7 +86,8 @@ home {
     margin-top: 70px;
     margin-bottom: 55px;
     flex-direction: column;
-    min-height: calc(100vh - 150px); /* 100vh minus header and footer height */
+    height: 100vh;
+/*    min-height: calc(100vh - 150px); /* 100vh minus header and footer height */
 }
 
 .home-header {
@@ -127,7 +128,7 @@ h2 {
     touch-action: pan-x; /* Enable horizontal scrolling for touch devices */
 }
 
-{/* }.scroll-container::-webkit-scrollbar {
+.scroll-container::-webkit-scrollbar {
     display: none; /* WebKit: hide scrollbar */
 }
 
